@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+:root {
+    --magenta: hsl(300, 43%, 22%);
+    --pink: hsl(333, 80%, 67%);
+    --dark-gray-magenta: hsl(303, 10%, 53%);
+    --light-gray-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    background-image: url(./images/bg-pattern-top-mobile.svg), url(./images/bg-pattern-bottom-mobile.svg);
+    background-position: top, bottom -17.5rem right 0rem;
+    background-size: auto, 40rem;
+    background-repeat: no-repeat, no-repeat;
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        background-image: url(./images/bg-pattern-top-mobile.svg), url(./images/bg-pattern-bottom-mobile.svg);
+        background-position: top -6.25rem left 3.125rem, top 28.125rem right;
+        background-size: 50rem, 50rem;
+        background-repeat: no-repeat, no-repeat;
+    }
+}
+
+.container {
+    margin: 3.125rem 1.5rem;
+    max-width: 23.75rem;
+    min-width: 20rem;
+    max-height: fit-content;
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        margin: 1.25rem;
+        max-width: 68.75rem;
+        height: 43.75rem;
+    }
+}
+
+.star-reviews {
+    text-align: center;
+}
+
+.text h1 {
+    font-weight: 700;
+    font-size: 2.75rem;
+    color: var(--magenta);
+    margin-bottom: 1.125rem;
+}
+
+.main-text {
+    color: var(--dark-gray-magenta);
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        max-width: 38%;
+        text-align: left;
+    }
+
+    .flex-desktop-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 18.75rem;
+        margin-bottom: 3.125rem;
+    }
+
+    .text h1 {
+        font-size: 3rem;
+    }
+
+    .star-boxes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.star-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-gray-magenta);
+    border-radius: 0.375rem;
+    padding: 0.875rem;
+    margin-bottom: 1.125rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .star-box {
+        padding: 1.125rem 2.25rem;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+    }
+
+    .star-box:nth-child(2) {
+        transform: translateX(-30px);
+    }
+
+    .star-box:nth-child(1) {
+        transform: translateX(-60px);
+    }
+}
+
+.star-box:nth-last-child(1) {
+    margin-bottom: 3.25rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .star-box:nth-last-child(1) {
+        margin: 0;
+    }
+}
+
+.background-stars {
+    width: 6.25rem;
+    height: 1.5625rem;
+    background-image: url(./images/icon-star.svg);
+    background-repeat: space;
+    background-size: auto;
+    margin-bottom: 0.3125rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .background-stars {
+        margin-bottom: 0rem;
+        margin-right: 1.625rem;
+        height: 1.125rem;
+    }
+}
+
+.rated {
+    font-weight: 700;
+    font-size: 0.9375rem;
+    color: var(--magenta);
+}
+
+@media screen and (min-width: 1024px) {
+    .review-boxes {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.375rem;
+    }
+}
+
+.review-box {
+    background-color: var(--magenta);
+    padding: 2.625rem;
+    border-radius: 0.375rem;
+    margin-bottom: 1.125rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .review-box {
+        padding: 1.875rem 2.625rem;
+        margin: 0;
+    }
+
+    .review-box:nth-child(2) {
+        transform: translateY(30px);
+    }
+
+    .review-box:nth-child(3) {
+        transform: translateY(60px);
+    }
+}
+
+.profile-image img {
+    width: 60%;
+    border-radius: 50%;
+}
+
+.reviewer-details {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+}
+
+.name h2 {
+    color: var(--white);
+    font-weight: 500;
+    font-size: 1.125rem;
+    margin-bottom: 0.375rem;
+}
+
+.name h3 {
+    color: var(--pink);
+    letter-spacing: 0.05625rem;
+}
+
+.review-text {
+    color: var(--white);
+    line-height: 1.6;
+    text-align: left;
+}
