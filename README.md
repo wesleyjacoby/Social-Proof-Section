@@ -45,7 +45,7 @@ Users should be able to:
 
 I found this challenge very difficult. The hardest part was deciding whether to use CSS Grid or Flexbox and then how to implement it for the mobile and desktop versions.
 
-CSS Grid would have been perfect for the mobile design, but I wsn't sure how to implement it for the desktop version.
+CSS Grid would have been perfect for the mobile design, but I wasn't sure how to implement it for the desktop version.
 
 I ended up using Flexbox for both the mobile and desktop version.
 
